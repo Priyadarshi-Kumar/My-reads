@@ -5,6 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import BooksList from './components/BooksList'
 import Search from './components/Search'
 import NotFound from './components/NotFound'
+import './NotFound.css'
 
 
 class BooksApp extends Component {
