@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Book from './Book'
 import { PropTypes } from 'prop-types'
 import * as BooksAPI from '../BooksAPI'
+import BookNotFound from './BookNotFound'
 
 class Search extends Component {
 
@@ -44,7 +45,7 @@ class Search extends Component {
   	if (searchValue.length) {
   		BooksAPI.search(searchValue, 16).then((books) => {
   		if (books.length) {
-          books = books.filter((book) => (book.imageLinks))
+          books = books.filter((book) => (book.imageLinks.thumbnail))
           books = this.changeBookShelf(books)
           this.setState({ books, error: '' })
         }else {
@@ -75,6 +76,7 @@ class Search extends Component {
             {this.state.query.length > 0 && this.state.books.map((book, index) => (<Book book={book} key={index} onUpdate={(shelf) => {
               this.readBook(book, shelf)
             }}/>))}
+            {this.state.query && <BookNotFound />}
           </ol>
         </div>
       </div>
