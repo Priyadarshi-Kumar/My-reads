@@ -76,7 +76,7 @@ class Search extends Component {
             {this.state.query.length > 0 && this.state.books.map((book, index) => (<Book book={book} key={index} onUpdate={(shelf) => {
               this.readBook(book, shelf)
             }}/>))}
-            {this.state.query && <BookNotFound />}
+            {this.state.error && <BookNotFound />}
           </ol>
         </div>
       </div>
