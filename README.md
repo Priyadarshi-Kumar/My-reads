@@ -1,6 +1,7 @@
 # MyReads Project
 
-This project keeps record of books. Three different shelfs are read, now reading and wants to read. This project uses BookApi for backend server.
+MyReads is a ReactJs project from Udacity's Front-end Nanodegree course. This is a bookshelf app that lets you to organize books that you have read, want to read and currently reading. This app is developed using React.js. BooksAPI.js used for backend server.
+
 
 ## How to run
 
