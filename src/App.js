@@ -4,6 +4,7 @@ import './App.css'
 import { Switch, Route } from 'react-router-dom'
 import BooksList from './components/BooksList'
 import Search from './components/Search'
+import NotFound from './components/NotFound'
 
 
 class BooksApp extends Component {
@@ -46,6 +47,7 @@ class BooksApp extends Component {
               onChange={this.updateBooksDetails}
             />)}
           />
+          <Route component={NotFound}/>
         </Switch>
       </div>
     )
