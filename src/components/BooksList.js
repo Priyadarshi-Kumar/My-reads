@@ -23,7 +23,7 @@ function BooksList(props) {
     )
 }
 
-BooksList.PropTypes = {
+BooksList.propTypes = {
     books: PropTypes.array.isRequired,
     onChange: PropTypes.func.isRequired
   }
